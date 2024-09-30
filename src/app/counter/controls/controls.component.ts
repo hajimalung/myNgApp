@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-controls',
@@ -7,9 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ControlsComponent implements OnInit {
 
+  @Output() onIncrement = new EventEmitter();
+  @Output() onDecrement = new EventEmitter();
+  @Output() onResest = new EventEmitter();
+
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  emitIncrement(){
+    this.onIncrement.emit();
+  }
+
+  emitDecrement(){
+    this.onDecrement.emit();
+  }
+
+  emitReset(){
+    this.onResest.emit();
   }
 
 }
