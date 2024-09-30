@@ -10,6 +10,9 @@ const _counterReducer = createReducer(initialCounterState,
     }
   }),
   on(decrement, state=>{
+
+    if(state.count==0) return state;
+
     return {
       ...state,
       count : state.count - 1
