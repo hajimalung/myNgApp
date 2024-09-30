@@ -8,7 +8,7 @@
     <th>completed</th>
   </tr>
 
-  <tr *ngFor="let record of filteredData">
+  <tr *ngFor="let record of filteredData" rowHoverHighlighter>
     <td>{{ record.id }}</td>
     <td [innerHTML]="record.title | highlight : searchQuery"></td>
     <td>{{ record.userId}}</td>

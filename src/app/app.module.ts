@@ -11,6 +11,7 @@ import { appStore } from './store/app.store';
 import { TableDataComponent } from './table-data/table-data.component';
 import { FormsModule } from '@angular/forms';
 import { HighlightPipe } from './table-data/highlighter.pipe';
+import { RowHoverHighlightDirective } from './table-data/row-highlighter.directive';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HighlightPipe } from './table-data/highlighter.pipe';
     OutputComponent,
     ControlsComponent,
     TableDataComponent,
-    HighlightPipe
+    HighlightPipe,
+    RowHoverHighlightDirective
   ],
   imports: [
     FormsModule,
