@@ -7,17 +7,22 @@ import { CounterComponent } from './counter/counter.component';
 import { OutputComponent } from './counter/output/output.component';
 import { ControlsComponent } from './counter/controls/controls.component';
 import { StoreModule } from '@ngrx/store';
-import { counterReducer } from './counter/state/counter.reducer';
 import { appStore } from './store/app.store';
+import { TableDataComponent } from './table-data/table-data.component';
+import { FormsModule } from '@angular/forms';
+import { HighlightPipe } from './table-data/highlighter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     CounterComponent,
     OutputComponent,
-    ControlsComponent
+    ControlsComponent,
+    TableDataComponent,
+    HighlightPipe
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     StoreModule.forRoot(appStore)

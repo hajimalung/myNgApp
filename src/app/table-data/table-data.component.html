@@ -1,0 +1,17 @@
+<h2>Table Data </h2>
+<input type="text" [(ngModel)]="searchQuery" ><button (click)="filterTableData()">Search</button>
+<table border="1">
+  <tr>
+    <th>Id</th>
+    <th>Title</th>
+    <th>userId</th>
+    <th>completed</th>
+  </tr>
+
+  <tr *ngFor="let record of filteredData">
+    <td>{{ record.id }}</td>
+    <td [innerHTML]="record.title | highlight : searchQuery"></td>
+    <td>{{ record.userId}}</td>
+    <td>{{ record.completed }}</td>
+  </tr>
+</table>
