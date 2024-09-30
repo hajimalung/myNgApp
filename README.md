@@ -29,3 +29,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## installing ngrx
 
 - `npm install @ngrx/store@12`
+
+# implement state
+
+- create initial state
+- create actions
