@@ -1,0 +1,31 @@
+:host{
+  display: block;
+  width: 1600px;
+}
+.panel-container{
+  border: 1px solid red;
+  width: 100%;
+}
+.panel-header{
+  border: 1px solid blue;
+  margin : 5px;
+  padding: 5px;
+}
+.panel-body{
+  border: 1px solid green;
+  margin: 5px;
+  padding: 5px;
+  display: flex;
+  &-left{
+    border: 1px solid greenyellow;
+    padding: 5px;
+    margin: 5px;
+    width: 200px;
+  }
+  &-right{
+    flex: 1;
+    border: 1px solid firebrick;
+    margin: 5px;
+    padding: 5px;
+  }
+}

@@ -12,6 +12,8 @@ import { TableDataComponent } from './table-data/table-data.component';
 import { FormsModule } from '@angular/forms';
 import { HighlightPipe } from './table-data/highlighter.pipe';
 import { RowHoverHighlightDirective } from './table-data/row-highlighter.directive';
+import { LayoutComponent } from './layout/layout.component';
+import { TlrPanelComponent } from './layout/tlr-panel/tlr-panel.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { RowHoverHighlightDirective } from './table-data/row-highlighter.directi
     ControlsComponent,
     TableDataComponent,
     HighlightPipe,
-    RowHoverHighlightDirective
+    RowHoverHighlightDirective,
+    LayoutComponent,
+    TlrPanelComponent
   ],
   imports: [
     FormsModule,

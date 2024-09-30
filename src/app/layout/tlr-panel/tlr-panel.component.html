@@ -1,0 +1,14 @@
+<p>tlr-panel works!</p>
+<div class="panel-container">
+  <div class="panel-header">
+    <ng-content select="[header]"></ng-content>
+  </div>
+  <div class="panel-body">
+    <div class="panel-body-left">
+      <ng-content select="[leftpanel]" ></ng-content>
+    </div>
+    <div class="panel-body-right">
+      <ng-content select="[rightpanel]"></ng-content>
+    </div>
+  </div>
+</div>
