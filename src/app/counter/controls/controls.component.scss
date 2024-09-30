@@ -1,0 +1,24 @@
+.control-container{
+  display: flex;
+}
+.btn{
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #FFFBE6;
+  border-radius: 5px;
+  cursor: pointer;
+  &:hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transform: scale(1.1);
+  }
+
+  &-primary{
+    background-color: #347928;
+  }
+  &-secondary{
+    background-color: #C0EBA6;
+  }
+  &-tertiary{
+    background-color: #FCCD2A;
+  }
+}
