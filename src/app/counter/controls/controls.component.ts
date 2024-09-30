@@ -1,4 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { CounterState } from '../state/counter.state';
+import { decrement, increment, reset } from '../state/counter.actions';
 
 @Component({
   selector: 'app-controls',
@@ -7,26 +10,24 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class ControlsComponent implements OnInit {
 
-  @Output() onIncrement = new EventEmitter();
-  @Output() onDecrement = new EventEmitter();
-  @Output() onResest = new EventEmitter();
 
 
-  constructor() { }
+  // store selector and State interface to define the type
+  constructor(private store:Store<{counter:CounterState}>) { }
 
   ngOnInit(): void {
   }
 
   emitIncrement(){
-    this.onIncrement.emit();
+    this.store.dispatch(increment());
   }
 
   emitDecrement(){
-    this.onDecrement.emit();
+    this.store.dispatch(decrement());
   }
 
   emitReset(){
-    this.onResest.emit();
+    this.store.dispatch(reset())
   }
 
 }
