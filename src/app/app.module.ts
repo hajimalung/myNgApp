@@ -14,6 +14,8 @@ import { HighlightPipe } from './table-data/highlighter.pipe';
 import { RowHoverHighlightDirective } from './table-data/row-highlighter.directive';
 import { LayoutComponent } from './layout/layout.component';
 import { TlrPanelComponent } from './layout/tlr-panel/tlr-panel.component';
+import { TransLationService } from './services/translation.service';
+import { Translator } from './pipes/translate.pipe';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { TlrPanelComponent } from './layout/tlr-panel/tlr-panel.component';
     HighlightPipe,
     RowHoverHighlightDirective,
     LayoutComponent,
-    TlrPanelComponent
+    TlrPanelComponent,
+    Translator
   ],
   imports: [
     FormsModule,
@@ -33,7 +36,7 @@ import { TlrPanelComponent } from './layout/tlr-panel/tlr-panel.component';
     AppRoutingModule,
     StoreModule.forRoot(appStore)
   ],
-  providers: [],
+  providers: [TransLationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

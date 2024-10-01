@@ -1,4 +1,5 @@
 <h2>Table Data </h2>
+<h2 *ngIf="isTranslatorReady" [innerText]="'language' | translate"></h2>
 <input type="text" [(ngModel)]="searchQuery" ><button (click)="filterTableData()">Search</button>
 <table border="1">
   <tr>

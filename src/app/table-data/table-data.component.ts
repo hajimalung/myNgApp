@@ -1,4 +1,5 @@
 import { Component, OnInit} from '@angular/core';
+import { TransLationService } from '../services/translation.service';
 
 @Component({
   selector: 'app-table-data',
@@ -10,8 +11,13 @@ export class TableDataComponent implements OnInit {
   originalData! :any ;
   filteredData! : any;
   searchQuery: any;
+  isTranslatorReady = false;
 
-  constructor() { }
+  constructor(translator:TransLationService) {
+    translator.isReady.subscribe(isTranslatorReady=>{
+      this.isTranslatorReady = isTranslatorReady;
+    });
+  }
 
   ngOnInit(): void {
     fetch("https://jsonplaceholder.typicode.com/todos")
