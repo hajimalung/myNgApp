@@ -8,7 +8,7 @@ import { SUPPORTED_TRANSLATION_LOCALES, TransLationService } from './services/tr
 })
 export class AppComponent implements OnInit{
   constructor(private traslator:TransLationService){
-    traslator.setLanguage(SUPPORTED_TRANSLATION_LOCALES.ENGLISH);
+    traslator.setLanguage(SUPPORTED_TRANSLATION_LOCALES.JAPANESE);
   }
   ngOnInit(): void {
   }
