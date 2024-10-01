@@ -1,7 +1,9 @@
 <h2>Table Data </h2>
-<h2 *ngIf="isTranslatorReady" [innerText]=>{{ 'language' | translate }}</h2>
-<input type="text" [(ngModel)]="searchQuery" ><button (click)="filterTableData()">Filter</button>
-<table border="1">
+<h2 *ngIf="isTranslatorReady" [innerText]=>Language test : {{ 'language' | translate }}</h2>
+<div class="filter-box">
+  <input type="text" [(ngModel)]="searchQuery" ><button (click)="filterTableData()">Filter</button>
+</div>
+<table border="1" class="jobs-table">
   <tr>
     <th>Id</th>
     <th>Title</th>
