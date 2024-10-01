@@ -16,6 +16,7 @@ import { LayoutComponent } from './layout/layout.component';
 import { TlrPanelComponent } from './layout/tlr-panel/tlr-panel.component';
 import { TransLationService } from './services/translation.service';
 import { Translator } from './pipes/translate.pipe';
+import { IconProvider } from './directives/icon-provider.directive';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { Translator } from './pipes/translate.pipe';
     RowHoverHighlightDirective,
     LayoutComponent,
     TlrPanelComponent,
-    Translator
+    Translator,
+    IconProvider
   ],
   imports: [
     FormsModule,

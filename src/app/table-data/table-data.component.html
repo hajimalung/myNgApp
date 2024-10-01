@@ -1,5 +1,6 @@
 <h2>Table Data </h2>
-<h2 *ngIf="isTranslatorReady" [innerText]=>Language test : {{ 'language' | translate }}</h2>
+<span myIcon type="success"></span> This icon is updated from a directive
+<h2 *ngIf="isTranslatorReady" [innerText]=> Language test : {{ 'language' | translate }}</h2>
 <div class="filter-box">
   <input type="text" [(ngModel)]="searchQuery" ><button (click)="filterTableData()">Filter</button>
 </div>
