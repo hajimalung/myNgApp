@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_app=self.webpackChunkmy_app||[]).push([[604],{604:p=>{p.exports=JSON.parse('{"language":"English"}')}}]);
