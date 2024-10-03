@@ -35,3 +35,15 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - create initial state
 - create actions
 - create reducers
+
+## to host apps using firebase we need firebase-tools cli
+
+`npm install -g firebase-tools`
+
+to deploy on firebase
+
+`firebase login`
+
+`firebase init`
+
+`firebase deploy`
